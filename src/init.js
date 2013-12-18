@@ -1,0 +1,3 @@
+var SkyPager = {};
+
+SkyPager.Views = {};
