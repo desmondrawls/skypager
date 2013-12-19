@@ -19,6 +19,10 @@ describe("Post View", function() {
   });
 
   describe("Rendering", function() {
+    it("returns the view object's el", function() {
+      expect(view.render()).toEqual(view.el);
+    });
+
     it("Contains the post's title", function() {
       view.render();
       console.log("CHILDREN:", view.$el.children());
