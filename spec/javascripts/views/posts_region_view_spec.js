@@ -3,7 +3,7 @@ describe("Posts Region View", function() {
     it("Attaches to the posts container", function() {
       var view = new SkyPager.Views.PostsRegion;
       console.log(view.el);
-      expect(view.$el).toEqual($("#posts"));
+      expect(view.$el).toEqual($("#posts-container"));
     });
   });
 });
