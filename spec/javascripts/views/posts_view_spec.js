@@ -10,7 +10,7 @@ describe("Posts Index View", function() {
       expect(view.tagName).toEqual('ul');
     });
     it("Has a class of posts", function() {
-      expect(view.className).toEqual('posts')
+      expect(view.className).toEqual('posts');
     });
   });
 
@@ -18,9 +18,9 @@ describe("Posts Index View", function() {
     var postView, post1, post2, post3, postSpy;
 
     beforeEach(function () {
-      post1 = new Backbone.Model({id:1});
-      post2 = new Backbone.Model({id:2});
-      post3 = new Backbone.Model({id:3});
+      post1 = new SkyPager.Models.Post({id:1});
+      post2 = new SkyPager.Models.Post({id:2});
+      post3 = new SkyPager.Models.Post({id:3});
       view.collection = new Backbone.Collection([
         post1,
         post2,
