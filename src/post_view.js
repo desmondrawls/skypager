@@ -1,5 +1,6 @@
 (function(SkyPager){
   SkyPager.Views.Post = Backbone.View.extend({
+    tagName: 'li',
 
     initialize: function(){
       console.log("in post#initialize");

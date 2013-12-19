@@ -52,10 +52,14 @@ describe("Posts Index View", function() {
       expect(postSpy.calls.count()).toEqual(3);
     });
 
-    it("Appends the new post views to the posts index view's el", function() {
+    it("Appends the new post views as list items to the posts index view's el", function() {
       view.render();
-      console.log("THIS EL:", view.$el.children().length);
+      console.log("THIS EL:", view.$el.children());
       expect(view.$el.children().length).toEqual(3);
+      view.$el.children().each(function(index, child) {
+        console.log(child);
+        expect(child.tagName).toEqual('LI');
+      });
     });
   });
 });
