@@ -21,7 +21,7 @@ describe("Posts Index View", function() {
       post1 = new SkyPager.Models.Post({id:1});
       post2 = new SkyPager.Models.Post({id:2});
       post3 = new SkyPager.Models.Post({id:3});
-      view.collection = new Backbone.Collection([
+      view.collection = new SkyPager.Collections.Posts([
         post1,
         post2,
         post3
