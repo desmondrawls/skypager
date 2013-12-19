@@ -4,9 +4,10 @@
     initialize: function(){
       console.log("in post#initialize");
     },
-    
+
     render: function(){
       console.log("rendering post");
+      return this.el;
     }
   });
 })(window.SkyPager || {})

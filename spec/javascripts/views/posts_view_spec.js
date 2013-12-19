@@ -46,10 +46,16 @@ describe("Posts Index View", function() {
     });
 
     it("Calls #render on a new post view for each post item", function() {
-      spyOn(SkyPager.Views.Post.prototype, "render");
+      postSpy = spyOn(SkyPager.Views.Post.prototype, "render");
       view.render();
       expect(SkyPager.Views.Post.prototype.render).toHaveBeenCalled();
-      // expect(postSpy.callCount).toEqual(3);
+      expect(postSpy.calls.count()).toEqual(3);
+    });
+
+    it("Appends the new post views to the posts index view's el", function() {
+      view.render();
+      console.log("THIS EL:", view.$el.children().length);
+      expect(view.$el.children().length).toEqual(3);
     });
   });
 });
