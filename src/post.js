@@ -14,6 +14,10 @@
     parseComments: function() {
       console.log("FROM POST PARSECOMMENTS:", this.get("comments"));
       this.comments = new SkyPager.Collections.Comments(this.get("comments"));
+    },
+
+    isPopular: function() {
+      return this.get('votes') > 5;
     }
   });
 })(window.SkyPager || {})
