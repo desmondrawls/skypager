@@ -5,6 +5,11 @@
       console.log("INITIALIZE POSTS:", data);
     },
 
+    comparator: function(post){
+      var today = new Date().getFullYear();
+      return today - post.get('created_at');
+    },
+
     popular: function(){
       var popularPosts = this.select(function(post){
         return post.isPopular();

@@ -38,7 +38,6 @@ describe("SkyPager", function(){
       spyOn(SkyPager.Routers, "Posts");
       SkyPager.initialize(data);
       expect(SkyPager.Routers.Posts).toHaveBeenCalled();
-      // SkyPager.Routers.Posts.restore();
     });
 
     it("starts backbone history", function(){
