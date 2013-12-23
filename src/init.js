@@ -1,7 +1,13 @@
-var SkyPager = {};
+var SkyPager = {
 
-SkyPager.Views = {};
+Views:{},
 
-SkyPager.Collections = {};
+Collections:{},
 
-SkyPager.Models = {};
+Models:{},
+
+initialize: function(data){
+  this.posts = new SkyPager.Collections.Posts(data.posts);
+}
+
+};
